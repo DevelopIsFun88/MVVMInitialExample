@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVMInitialExample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="List Preview" Height="450" Width="600">
     <Grid>
-        
+        <DataGrid ItemsSource="{Binding Lst}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="1*"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="3*"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding Quantity}" Width="1*"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

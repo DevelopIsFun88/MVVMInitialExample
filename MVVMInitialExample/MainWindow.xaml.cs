@@ -23,6 +23,7 @@ namespace MVVMInitialExample
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = new MainWindowVM();
         }
     }
 }
